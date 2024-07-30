@@ -1,6 +1,7 @@
 set filelist [glob *.out]
 set sortedfilelist [lsort -dictionary $filelist]
 
+##SMD Direction
 set nx  0.60
 set ny  0.77
 set nz -0.16
@@ -9,9 +10,6 @@ foreach file $sortedfilelist {
 set filewhext [file rootname $file]
 set file [open $file r]
 set output [open ${filewhext}_output.dat w]
-
-##SMD Direction
-
 
 
 while { [gets $file line] != -1 } {
